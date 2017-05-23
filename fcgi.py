@@ -1,17 +1,3 @@
-fcgi - a FastCGI/WSGI gateway.
-For more information about FastCGI, see <http://www.fastcgi.com/>.
-For more information about the Web Server Gateway Interface, see
-<http://www.python.org/peps/pep-0333.html>.
-Example usage:
-  #!/usr/bin/env python
-  from myapplication import app # Assume app is your WSGI application object
-  from fcgi import WSGIServer
-  WSGIServer(app).run()
-See the documentation for WSGIServer/Server for more information.
-On most platforms, fcgi will fallback to regular CGI behavior if run in a
-non-FastCGI context. If you want to force CGI behavior, set the environment
-variable FCGI_FORCE_CGI to "Y" or "y".
-"""
 
 __author__ = 'Allan Saddi <allan@saddi.com>'
 __version__ = '$Revision$'
