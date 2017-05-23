@@ -11,7 +11,7 @@ apt-get install apache2 -y
 
 cp apache2.conf /etc/apache2/apache2.conf
 cp 000-default.conf /etc/apache2/sites-available/000-default.conf
-cp /cgi-bin /var/www/cgi-bin
+cp /cgi-bin /var/www/cgi-bin -r
 a2enmod cgi
 /etc/init.d/apache2 restart
 
