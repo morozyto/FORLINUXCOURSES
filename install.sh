@@ -2,15 +2,15 @@
  if [ "$USER" != "root" ]
 	then sudo -s
 fi
-
+apt-get update
 apt-get install python3 -y
 
 apt-get install apache2 -y
 
-cp apache2.conf /etc/apache2/apache2/conf
+cp apache2.conf /etc/apache2/apache2.conf
 cp 000-default.conf /etc/apache2/sites-available/000-default.conf
-mkdir /var/www/cgi-bin 
-cp test.py /var/www/cgi-bin/test.py
+cp ports.conf /etc/apache2/ports.conf
+cp /cgi-bin /var/www/cgi-bin -r 
 a2enmod cgi
 /etc/init.d/apache2 restart
 
