@@ -7,7 +7,7 @@ apt-get install python3 -y
 
 apt-get install apache2 -y
 
-cp apache2.conf /etc/apache2/apache2/conf
+cp apache2.conf /etc/apache2/apache2.conf
 cp 000-default.conf /etc/apache2/sites-available/000-default.conf
 cp /cgi-bin /var/www/cgi-bin
 a2enmod cgi
