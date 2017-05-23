@@ -1,7 +1,9 @@
 #!/bin/bash
- if [ "$USER" != "root" ]
+if [ "$USER" != "root" ]
 	then sudo -s
 fi
+
+apt-get update
 
 apt-get install python3 -y
 
